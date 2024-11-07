@@ -1,6 +1,7 @@
 buildscript {
   ext {
     agp_version = '8.7.2'
+    agp_version1 = '8.5.2'
   }
   repositories {
     google()
@@ -8,7 +9,7 @@ buildscript {
   }
 
   dependencies {
-    classpath "com.android.tools.build:gradle:$agp_version"
+    classpath "com.android.tools.build:gradle:$agp_version1"
   }
 }
 
@@ -45,6 +46,12 @@ android {
     release {
       minifyEnabled false
     }
+
+    namespace "com.beaconradar"
+  }
+
+  buildFeatures {
+    buildConfig true
   }
 
   lintOptions {
